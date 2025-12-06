@@ -1,0 +1,17 @@
+import { StartNode } from './StartNode';
+import { TaskNode } from './TaskNode';
+import { ApprovalNode } from './ApprovalNode';
+import { AutomatedNode } from './AutomatedNode';
+import { EndNode } from './EndNode';
+
+// Re-export components
+export { StartNode, TaskNode, ApprovalNode, AutomatedNode, EndNode };
+
+// Node types map for React Flow
+export const nodeTypes = {
+  start: StartNode,
+  task: TaskNode,
+  approval: ApprovalNode,
+  automated: AutomatedNode,
+  end: EndNode,
+};

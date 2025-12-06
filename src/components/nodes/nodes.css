@@ -1,0 +1,137 @@
+.workflow-node {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.workflow-node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.workflow-node.selected {
+  border-color: var(--node-color, #4a90d9);
+  box-shadow: 0 0 0 2px var(--node-color, #4a90d9), 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.workflow-node.has-error {
+  border-color: #ef4444;
+}
+
+.workflow-node.has-warning {
+  border-color: #f59e0b;
+}
+
+.node-header {
+  padding: 8px 12px;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.node-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.node-content {
+  padding: 12px;
+}
+
+.node-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+  word-break: break-word;
+}
+
+.node-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.node-handle {
+  width: 12px;
+  height: 12px;
+  background: #4a90d9;
+  border: 2px solid white;
+  transition: all 0.2s ease;
+}
+
+.node-handle:hover {
+  background: #357abd;
+  transform: scale(1.2);
+}
+
+.node-error-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: help;
+}
+
+
+.start-node .node-header {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+
+.task-node .node-header {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+
+.approval-node .node-header {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.automated-node .node-header {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.end-node .node-header {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.node-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.node-badge.assignee {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.node-badge.role {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.node-badge.action {
+  background: #ede9fe;
+  color: #6b21a8;
+}
